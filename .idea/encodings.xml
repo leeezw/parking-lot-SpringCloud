@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/parking-base-serv/parking-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parking-base-serv/parking-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parking-base-serv/parking-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parking-base-serv/parking-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parking-base-serv/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parking-base-serv/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parking-card/src/main/java" charset="UTF-8" />
