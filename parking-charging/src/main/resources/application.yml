@@ -1,0 +1,23 @@
+# 应用程序配置
+spring:
+  application:
+    name: parking-member # 应用名称，用于服务发现等场景
+
+  # 配置数据源（以MySQL为例，假设使用Spring Data JPA）
+  datasource:
+    url: jdbc:mysql://113.44.75.36:3306/park_charge?useSSL=false&serverTimezone=UTC
+    username: park_charge
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+# 服务器配置
+server:
+  port: 8604  # 应用监听的端口号
+
+# 日志配置（以Logback为例，Spring Boot默认使用Logback）
+logging:
+  level:
+    root: INFO  # 设置根日志级别为INFO
+    com.example.yourpackage: DEBUG  # 可以针对特定的包设置更详细的日志级别，这里假设你的业务代码在com.example.yourpackage包下
