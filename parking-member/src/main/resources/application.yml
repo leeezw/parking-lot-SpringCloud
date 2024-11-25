@@ -9,15 +9,31 @@ spring:
     username: park_member
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 
 # 服务器配置
 server:
   port: 8601  # 应用监听的端口号
-
+  servlet:
+    context-path: /api
 # 日志配置（以Logback为例，Spring Boot默认使用Logback）
 logging:
   level:
     root: INFO  # 设置根日志级别为INFO
     com.example.yourpackage: DEBUG  # 可以针对特定的包设置更详细的日志级别，这里假设你的业务代码在com.example.yourpackage包下
+
+# 接口文档配置
+knife4j:
+  enable: true
+  openapi:
+    title: "接口文档"
+    version: 1.0
+    group:
+      default:
+        api-rule: package
+        api-rule-resources:
+          - com.parking.member.controller
