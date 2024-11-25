@@ -1,0 +1,20 @@
+server:
+  port: 8604
+spring:
+  application:
+    name: parking-charging
+  cloud:
+    # nacos.core.auth.caching.enabled=true 时，开启登录校验
+    # 此时需要设置 username 与 password
+    # nacos.core.auth.caching.enabled=false 时，不使用用户与密码
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+        service: parking-charging
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        username: nacos
+        password: nacos

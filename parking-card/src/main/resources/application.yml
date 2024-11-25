@@ -1,7 +1,7 @@
 # 应用程序配置
 spring:
   application:
-    name: parking-member # 应用名称，用于服务发现等场景
+    name: parking-card # 应用名称，用于服务发现等场景
 
   # 配置数据源（以MySQL为例，假设使用Spring Data JPA）
   datasource:

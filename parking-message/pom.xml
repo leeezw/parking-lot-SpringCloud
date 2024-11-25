@@ -42,11 +42,22 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- 引入Junit（如果测试还需要的话，这里保留了根目录pom.xml中原有的Junit依赖） -->
+        <!-- nacos客户端依赖 -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!--服务配置依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!--在springcloud 2020.0.2版本中把bootstrap的相关依赖从spring-cloud-starter-config中移除了
+        ，所以现在在2020.02 以后需要单独引入spring-cloud-starter-bootstrap 依赖。-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
