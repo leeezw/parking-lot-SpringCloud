@@ -18,6 +18,13 @@
     </properties>
 
     <dependencies>
+    <!--    引入common以使用他的资源-->
+        <dependency>
+            <groupId>com.mall.parking.root</groupId>
+            <artifactId>parking-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- 引入Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,6 +64,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

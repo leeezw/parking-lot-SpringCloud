@@ -17,7 +17,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!--    引入common以使用他的资源-->
     <dependencies>
+        <dependency>
+            <groupId>com.mall.parking.root</groupId>
+            <artifactId>parking-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- 引入Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,22 +58,26 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <!-- nacos客户端依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
         <!--服务配置依赖-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-<!--在springcloud 2020.0.2版本中把bootstrap的相关依赖从spring-cloud-starter-config中移除了
-，所以现在在2020.02 以后需要单独引入spring-cloud-starter-bootstrap 依赖。-->
+
+        <!--在springcloud 2020.0.2版本中把bootstrap的相关依赖从spring-cloud-starter-config中移除了
+        ，所以现在在2020.02 以后需要单独引入spring-cloud-starter-bootstrap 依赖。-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
 
 
     </dependencies>
