@@ -8,4 +8,6 @@ public interface MemberService {
      * @return
      */
     int bindMobileUseRestTemplate(String json);
+
+    int bindMobile(String json);
 }

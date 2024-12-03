@@ -26,5 +26,15 @@ public class MemberController {
         return result;
     }
 
+    @RequestMapping(value = "/bindMobile", method = RequestMethod.POST)
+    public CommonResult<Integer> bindMobile(String json) throws BusinessException{
+        CommonResult<Integer> result = new CommonResult<>();
+        log.info("bind mobile param = " + json);
+        int rtn = memberService.bindMobile(json);
+        result.setRespData(rtn);
+        return result;
+    }
+
+
 
 }

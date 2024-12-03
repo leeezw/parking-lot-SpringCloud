@@ -22,7 +22,7 @@ public class MemberCardController {
     public CommonResult<Integer> addCard(String json) throws BusinessException {
         log.info("eclise service example: begin add member card = " + json);
         //log.info("jar service example: begin add member card = " + json);
-        CommonResult<Integer> result = new CommonResult<>();
+        CommonResult<Integer> result = new CommonResult<Integer>();
         int rtn = cardService.addMemberCard(json);
         result.setRespData(rtn);
         return result;

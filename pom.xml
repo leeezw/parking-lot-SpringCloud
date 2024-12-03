@@ -39,7 +39,6 @@
       </dependency>
 
 
-
       <!-- MySQL -->
       <dependency>
         <groupId>mysql</groupId>
@@ -76,27 +75,27 @@
         <version>4.3.0</version>
       </dependency>
 
-      <!-- nacos客户端依赖 -->
-      <dependency>
-        <groupId>com.alibaba.cloud</groupId>
-        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        <version>2021.0.5.0</version>
-      </dependency>
+<!--      &lt;!&ndash; nacos客户端依赖 &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>com.alibaba.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--        <version>2021.0.5.0</version>-->
+<!--      </dependency>-->
 
-      <!--服务配置依赖-->
-      <dependency>
-        <groupId>com.alibaba.cloud</groupId>
-        <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        <version>2021.0.5.0</version>
-      </dependency>
+<!--      &lt;!&ndash;服务配置依赖&ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>com.alibaba.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--        <version>2021.0.5.0</version>-->
+<!--      </dependency>-->
 
-      <!--在springcloud 2020.0.2版本中把bootstrap的相关依赖从spring-cloud-starter-config中移除了
-      ，所以现在在2020.02 以后需要单独引入spring-cloud-starter-bootstrap 依赖。-->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        <version>3.0.3</version>
-      </dependency>
+<!--      &lt;!&ndash;在springcloud 2020.0.2版本中把bootstrap的相关依赖从spring-cloud-starter-config中移除了-->
+<!--      ，所以现在在2020.02 以后需要单独引入spring-cloud-starter-bootstrap 依赖。&ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>org.springframework.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-starter-bootstrap</artifactId>-->
+<!--        <version>3.0.3</version>-->
+<!--      </dependency>-->
 
         <!-- Gson 库 -->
         <dependency>
@@ -105,21 +104,23 @@
           <version>2.8.9</version> <!-- 你可以选择适合的版本 -->
         </dependency>
 
+      <!-- Spring Cloud 2021.0 -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>2021.0.5</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
-      <!--      <dependency>-->
-<!--        <groupId>org.springframework.cloud</groupId>-->
-<!--        <artifactId>spring-cloud-dependencies</artifactId>-->
-<!--        <version>${spring-cloud.version}</version>-->
-<!--        <type>pom</type>-->
-<!--        <scope>import</scope>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.alibaba.cloud</groupId>-->
-<!--        <artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
-<!--        <version>${spring-cloud-alibaba.version}</version>-->
-<!--        <type>pom</type>-->
-<!--        <scope>import</scope>-->
-<!--      </dependency>-->
+      <!-- Spring Cloud Alibaba -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>2021.0.5.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
