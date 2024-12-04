@@ -8,6 +8,7 @@ import com.parking.common.utils.GlobalIdGenerator;
 import com.parking.common.utils.JsonUtils;
 import com.parking.member.client.MemberCardClient;
 import com.parking.member.mapper.MemberMapper;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
@@ -69,7 +70,8 @@ public class MemberServiceImpl implements MemberService {
         member.setId(GlobalIdGenerator.generateSnowflakeId());
         member.setCreateDate(new Date());
         member.setUpdateDate(new Date());
-        int rtn = memberMapper.insert(member);
+        int rtn = 1;
+//        int rtn = memberMapper.insert(member);
         // invoke another service
         if (rtn > 0) {
             MemberCard card = new MemberCard();
